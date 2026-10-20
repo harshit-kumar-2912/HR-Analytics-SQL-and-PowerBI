@@ -1,0 +1,14 @@
+*.py text eol=lf
+*.sql text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.bim text eol=lf
+*.pbip text eol=lf
+*.pbir text eol=lf
+*.pbism text eol=lf
+data/raw/*.csv -text
+data/processed/*.csv text eol=lf
+*.pbix binary
+*.png binary
+*.pdf binary

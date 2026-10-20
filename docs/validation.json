@@ -1,0 +1,23 @@
+{
+  "mysql_version": "8.0.44",
+  "sql_mode": "ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION",
+  "employee_rows_reconciled": 22214,
+  "annual_rows_reconciled": 21,
+  "repeated_cleaning_identical": true,
+  "analytical_queries_executed": true,
+  "metrics": {
+    "as_of_date": "2020-12-31",
+    "raw_records": 22214,
+    "invalid_records": 66,
+    "eligible_records": 22148,
+    "active_employees": 20259,
+    "terminated_employees": 1889,
+    "future_termination_records": 2031,
+    "hired_under_16_records": 4800,
+    "cumulative_exit_share": 0.08528986815965324,
+    "average_completed_tenure_years": 6.614889134713514,
+    "active_headquarters_share": 0.7507774322523323,
+    "source_sha256": "ff2fb04c415459f6ab28e6257e94126d8af7e49d5a2dc828079925f5cef5b27e"
+  },
+  "power_bi_desktop_render_and_refresh": "not executed in this environment"
+}

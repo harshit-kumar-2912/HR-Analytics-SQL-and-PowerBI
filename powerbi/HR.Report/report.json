@@ -1,0 +1,217 @@
+{
+  "id": 0,
+  "resourcePackages": [],
+  "sections": [
+    {
+      "id": 0,
+      "name": "ReportSection0",
+      "displayName": "Workforce Overview",
+      "filters": "[]",
+      "ordinal": 0,
+      "visualContainers": [
+        {
+          "x": 10,
+          "y": 0,
+          "z": 0,
+          "width": 1260,
+          "height": 55,
+          "config": "{\"name\": \"8449b059feea5357871b\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 0, \"z\": 0, \"width\": 1260, \"height\": 55}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"HR Workforce Overview | Harshit Kumar | As of 31 Dec 2020\", \"textStyle\": {\"fontSize\": \"18pt\", \"fontFamily\": \"Segoe UI\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 60,
+          "z": 1000,
+          "width": 250,
+          "height": 110,
+          "config": "{\"name\": \"fa9f3257d71b5f2087a9\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 60, \"z\": 1000, \"width\": 250, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Employees.Active Employees\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Active employees'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"DataReduction\": {\"DataVolume\": 3, \"Primary\": {\"Top\": {}}}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Values\": [0]}}"
+        },
+        {
+          "x": 270,
+          "y": 60,
+          "z": 1000,
+          "width": 400,
+          "height": 110,
+          "config": "{\"name\": \"68b4198a1dbe5724869d\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 270, \"y\": 60, \"z\": 1000, \"width\": 400, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Employees.Average Completed Tenure\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Average Completed Tenure\"}, \"Name\": \"Employees.Average Completed Tenure\", \"NativeReferenceName\": \"Average Completed Tenure\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Completed tenure of exited employees (years)'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Average Completed Tenure\"}, \"Name\": \"Employees.Average Completed Tenure\", \"NativeReferenceName\": \"Average Completed Tenure\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"DataReduction\": {\"DataVolume\": 3, \"Primary\": {\"Top\": {}}}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Values\": [0]}}"
+        },
+        {
+          "x": 920,
+          "y": 60,
+          "z": 1000,
+          "width": 350,
+          "height": 110,
+          "config": "{\"name\": \"e5ee8ea4ce4550a6bfd1\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 920, \"y\": 60, \"z\": 1000, \"width\": 350, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"Employees.department\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"department\"}, \"Name\": \"Employees.department\", \"NativeReferenceName\": \"department\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Department'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"department\"}, \"Name\": \"Employees.department\", \"NativeReferenceName\": \"department\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"DataReduction\": {\"DataVolume\": 4, \"Primary\": {\"Window\": {\"Count\": 1000}}}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Values\": [0]}}"
+        },
+        {
+          "x": 10,
+          "y": 180,
+          "z": 1000,
+          "width": 390,
+          "height": 240,
+          "config": "{\"name\": \"10a106e76d855cc9a5bf\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 180, \"z\": 1000, \"width\": 390, \"height\": 240}}], \"singleVisual\": {\"visualType\": \"columnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Employees.gender\", \"active\": true}], \"Y\": [{\"queryRef\": \"Employees.Active Employees\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"gender\"}, \"Name\": \"Employees.gender\", \"NativeReferenceName\": \"gender\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"gender\"}}}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Active workforce by gender'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"gender\"}, \"Name\": \"Employees.gender\", \"NativeReferenceName\": \"gender\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"gender\"}}}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"DataReduction\": {\"DataVolume\": 4, \"Primary\": {\"Window\": {\"Count\": 1000}}}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Category\": [0], \"Y\": [1]}}"
+        },
+        {
+          "x": 410,
+          "y": 180,
+          "z": 1000,
+          "width": 390,
+          "height": 240,
+          "config": "{\"name\": \"d84c703d3d2353a8adca\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 410, \"y\": 180, \"z\": 1000, \"width\": 390, \"height\": 240}}], \"singleVisual\": {\"visualType\": \"donutChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Employees.location\", \"active\": true}], \"Y\": [{\"queryRef\": \"Employees.Active Employees\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"location\"}, \"Name\": \"Employees.location\", \"NativeReferenceName\": \"location\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"location\"}}}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Active workforce: headquarters vs remote'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"location\"}, \"Name\": \"Employees.location\", \"NativeReferenceName\": \"location\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"location\"}}}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"DataReduction\": {\"DataVolume\": 4, \"Primary\": {\"Window\": {\"Count\": 1000}}}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Category\": [0], \"Y\": [1]}}"
+        },
+        {
+          "x": 810,
+          "y": 180,
+          "z": 1000,
+          "width": 460,
+          "height": 240,
+          "config": "{\"name\": \"1780114d443c5ddeb3de\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 810, \"y\": 180, \"z\": 1000, \"width\": 460, \"height\": 240}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Employees.location_state\", \"active\": true}], \"Y\": [{\"queryRef\": \"Employees.Active Employees\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"location_state\"}, \"Name\": \"Employees.location_state\", \"NativeReferenceName\": \"location_state\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"location_state\"}}}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Active workforce by state'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"location_state\"}, \"Name\": \"Employees.location_state\", \"NativeReferenceName\": \"location_state\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"location_state\"}}}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"DataReduction\": {\"DataVolume\": 4, \"Primary\": {\"Window\": {\"Count\": 1000}}}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Category\": [0], \"Y\": [1]}}"
+        },
+        {
+          "x": 10,
+          "y": 440,
+          "z": 1000,
+          "width": 625,
+          "height": 260,
+          "config": "{\"name\": \"2f4e40fbbe3a5601aa6b\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 440, \"z\": 1000, \"width\": 625, \"height\": 260}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Year.year\", \"active\": true}], \"Y\": [{\"queryRef\": \"Employees.Closing Headcount\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}, {\"Name\": \"y\", \"Entity\": \"Year\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"y\"}}, \"Property\": \"year\"}, \"Name\": \"Year.year\", \"NativeReferenceName\": \"year\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Closing Headcount\"}, \"Name\": \"Employees.Closing Headcount\", \"NativeReferenceName\": \"Closing Headcount\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"y\"}}, \"Property\": \"year\"}}}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Year-end active headcount (calendar year)'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}, {\"Name\": \"y\", \"Entity\": \"Year\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"y\"}}, \"Property\": \"year\"}, \"Name\": \"Year.year\", \"NativeReferenceName\": \"year\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Closing Headcount\"}, \"Name\": \"Employees.Closing Headcount\", \"NativeReferenceName\": \"Closing Headcount\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"y\"}}, \"Property\": \"year\"}}}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"DataReduction\": {\"DataVolume\": 4, \"Primary\": {\"Window\": {\"Count\": 1000}}}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Category\": [0], \"Y\": [1]}}"
+        },
+        {
+          "x": 645,
+          "y": 440,
+          "z": 1000,
+          "width": 625,
+          "height": 260,
+          "config": "{\"name\": \"9f82caf1fceb5f46b47b\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 645, \"y\": 440, \"z\": 1000, \"width\": 625, \"height\": 260}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Employees.race\", \"active\": true}], \"Y\": [{\"queryRef\": \"Employees.Active Employees\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"race\"}, \"Name\": \"Employees.race\", \"NativeReferenceName\": \"race\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"race\"}}}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Active workforce by race / ethnicity'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"race\"}, \"Name\": \"Employees.race\", \"NativeReferenceName\": \"race\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"race\"}}}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"DataReduction\": {\"DataVolume\": 4, \"Primary\": {\"Window\": {\"Count\": 1000}}}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Category\": [0], \"Y\": [1]}}"
+        }
+      ],
+      "config": "{}",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "id": 1,
+      "name": "ReportSection1",
+      "displayName": "Demographics and Retention",
+      "filters": "[]",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "x": 10,
+          "y": 0,
+          "z": 0,
+          "width": 1260,
+          "height": 55,
+          "config": "{\"name\": \"28fac33db4c95817afd2\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 0, \"z\": 0, \"width\": 1260, \"height\": 55}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Demographics and Retention | Harshit Kumar | As of 31 Dec 2020\", \"textStyle\": {\"fontSize\": \"18pt\", \"fontFamily\": \"Segoe UI\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 10,
+          "y": 60,
+          "z": 1000,
+          "width": 290,
+          "height": 110,
+          "config": "{\"name\": \"19f86197d25e5c85b9ad\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 60, \"z\": 1000, \"width\": 290, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Employees.Eligible Hires\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Eligible Hires\"}, \"Name\": \"Employees.Eligible Hires\", \"NativeReferenceName\": \"Eligible Hires\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Eligible hires to reporting date'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Eligible Hires\"}, \"Name\": \"Employees.Eligible Hires\", \"NativeReferenceName\": \"Eligible Hires\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"DataReduction\": {\"DataVolume\": 3, \"Primary\": {\"Top\": {}}}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Values\": [0]}}"
+        },
+        {
+          "x": 310,
+          "y": 60,
+          "z": 1000,
+          "width": 290,
+          "height": 110,
+          "config": "{\"name\": \"f06db1f5b63c597d9c20\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 310, \"y\": 60, \"z\": 1000, \"width\": 290, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Employees.Terminated Employees\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Terminated Employees\"}, \"Name\": \"Employees.Terminated Employees\", \"NativeReferenceName\": \"Terminated Employees\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Completed exits to reporting date'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Terminated Employees\"}, \"Name\": \"Employees.Terminated Employees\", \"NativeReferenceName\": \"Terminated Employees\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"DataReduction\": {\"DataVolume\": 3, \"Primary\": {\"Top\": {}}}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Values\": [0]}}"
+        },
+        {
+          "x": 610,
+          "y": 60,
+          "z": 1000,
+          "width": 390,
+          "height": 110,
+          "config": "{\"name\": \"1fd341565a4859f69066\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 610, \"y\": 60, \"z\": 1000, \"width\": 390, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Employees.Cumulative Exit Share\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Cumulative Exit Share\"}, \"Name\": \"Employees.Cumulative Exit Share\", \"NativeReferenceName\": \"Cumulative Exit Share\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Cumulative exit share (not annual turnover)'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Cumulative Exit Share\"}, \"Name\": \"Employees.Cumulative Exit Share\", \"NativeReferenceName\": \"Cumulative Exit Share\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0]}]}, \"DataReduction\": {\"DataVolume\": 3, \"Primary\": {\"Top\": {}}}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Values\": [0]}}"
+        },
+        {
+          "x": 10,
+          "y": 180,
+          "z": 1000,
+          "width": 625,
+          "height": 240,
+          "config": "{\"name\": \"085b13235ac453adb055\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 180, \"z\": 1000, \"width\": 625, \"height\": 240}}], \"singleVisual\": {\"visualType\": \"columnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Employees.age_group\", \"active\": true}], \"Y\": [{\"queryRef\": \"Employees.Active Employees\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"age_group\"}, \"Name\": \"Employees.age_group\", \"NativeReferenceName\": \"age_group\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"age_group\"}}}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Active workforce by age group'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"age_group\"}, \"Name\": \"Employees.age_group\", \"NativeReferenceName\": \"age_group\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"age_group\"}}}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"DataReduction\": {\"DataVolume\": 4, \"Primary\": {\"Window\": {\"Count\": 1000}}}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Category\": [0], \"Y\": [1]}}"
+        },
+        {
+          "x": 645,
+          "y": 180,
+          "z": 1000,
+          "width": 625,
+          "height": 240,
+          "config": "{\"name\": \"9ff3e3a8c0765a97bd35\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 645, \"y\": 180, \"z\": 1000, \"width\": 625, \"height\": 240}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Employees.age_group\", \"active\": true}], \"Y\": [{\"queryRef\": \"Employees.Active Employees\"}], \"Series\": [{\"queryRef\": \"Employees.gender\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"age_group\"}, \"Name\": \"Employees.age_group\", \"NativeReferenceName\": \"age_group\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"gender\"}, \"Name\": \"Employees.gender\", \"NativeReferenceName\": \"gender\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"age_group\"}}}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Active age distribution by gender'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"age_group\"}, \"Name\": \"Employees.age_group\", \"NativeReferenceName\": \"age_group\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"gender\"}, \"Name\": \"Employees.gender\", \"NativeReferenceName\": \"gender\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"age_group\"}}}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"DataReduction\": {\"DataVolume\": 4, \"Primary\": {\"Window\": {\"Count\": 1000}}, \"Secondary\": {\"Top\": {\"Count\": 60}}}, \"Version\": 1, \"Secondary\": {\"Groupings\": [{\"Projections\": [2]}]}}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Category\": [0], \"Y\": [1], \"Series\": [2]}}"
+        },
+        {
+          "x": 10,
+          "y": 440,
+          "z": 1000,
+          "width": 500,
+          "height": 260,
+          "config": "{\"name\": \"2e60f4e3eefc54a59d72\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 10, \"y\": 440, \"z\": 1000, \"width\": 500, \"height\": 260}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"Employees.department\"}, {\"queryRef\": \"Employees.Cumulative Exit Share\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"department\"}, \"Name\": \"Employees.department\", \"NativeReferenceName\": \"department\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Cumulative Exit Share\"}, \"Name\": \"Employees.Cumulative Exit Share\", \"NativeReferenceName\": \"Cumulative Exit Share\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Department cumulative exit share'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"department\"}, \"Name\": \"Employees.department\", \"NativeReferenceName\": \"department\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Cumulative Exit Share\"}, \"Name\": \"Employees.Cumulative Exit Share\", \"NativeReferenceName\": \"Cumulative Exit Share\"}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"DataReduction\": {\"DataVolume\": 4, \"Primary\": {\"Window\": {\"Count\": 1000}}}, \"Version\": 1}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Values\": [0, 1]}}"
+        },
+        {
+          "x": 520,
+          "y": 440,
+          "z": 1000,
+          "width": 750,
+          "height": 260,
+          "config": "{\"name\": \"d6b39d78d8f45f4fb50f\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 520, \"y\": 440, \"z\": 1000, \"width\": 750, \"height\": 260}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Employees.department\", \"active\": true}], \"Y\": [{\"queryRef\": \"Employees.Active Employees\"}], \"Series\": [{\"queryRef\": \"Employees.gender\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"department\"}, \"Name\": \"Employees.department\", \"NativeReferenceName\": \"department\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"gender\"}, \"Name\": \"Employees.gender\", \"NativeReferenceName\": \"gender\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"department\"}}}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Active workforce: department and gender'\"}}}}}]}}}",
+          "filters": "[]",
+          "query": "{\"Commands\": [{\"SemanticQueryDataShapeCommand\": {\"Query\": {\"Version\": 2, \"From\": [{\"Name\": \"e\", \"Entity\": \"Employees\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"department\"}, \"Name\": \"Employees.department\", \"NativeReferenceName\": \"department\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"Active Employees\"}, \"Name\": \"Employees.Active Employees\", \"NativeReferenceName\": \"Active Employees\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"gender\"}, \"Name\": \"Employees.gender\", \"NativeReferenceName\": \"gender\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"e\"}}, \"Property\": \"department\"}}}]}, \"Binding\": {\"Primary\": {\"Groupings\": [{\"Projections\": [0, 1]}]}, \"DataReduction\": {\"DataVolume\": 4, \"Primary\": {\"Window\": {\"Count\": 1000}}, \"Secondary\": {\"Top\": {\"Count\": 60}}}, \"Version\": 1, \"Secondary\": {\"Groupings\": [{\"Projections\": [2]}]}}, \"ExecutionMetricsKind\": 1}}]}",
+          "dataTransforms": "{\"objects\": {}, \"projectionOrdering\": {\"Category\": [0], \"Y\": [1], \"Series\": [2]}}"
+        }
+      ],
+      "config": "{}",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720
+    }
+  ],
+  "config": "{\"version\": \"5.67\", \"activeSectionIndex\": 0, \"defaultDrillFilterOtherVisuals\": true, \"settings\": {\"useNewFilterPaneExperience\": true}}",
+  "layoutOptimization": 0
+}

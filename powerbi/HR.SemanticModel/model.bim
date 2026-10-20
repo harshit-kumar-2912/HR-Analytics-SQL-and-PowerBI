@@ -1,0 +1,267 @@
+{
+  "name": "HR Analytics",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "expressions": [
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/HR-Analytics-SQL-and-PowerBI/data/processed\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "tables": [
+      {
+        "name": "Employees",
+        "columns": [
+          {
+            "name": "emp_id",
+            "dataType": "string",
+            "sourceColumn": "emp_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "birthdate",
+            "dataType": "dateTime",
+            "sourceColumn": "birthdate",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd"
+          },
+          {
+            "name": "hire_date",
+            "dataType": "dateTime",
+            "sourceColumn": "hire_date",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd"
+          },
+          {
+            "name": "termdate",
+            "dataType": "dateTime",
+            "sourceColumn": "termdate",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd"
+          },
+          {
+            "name": "gender",
+            "dataType": "string",
+            "sourceColumn": "gender",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "race",
+            "dataType": "string",
+            "sourceColumn": "race",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "department",
+            "dataType": "string",
+            "sourceColumn": "department",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "jobtitle",
+            "dataType": "string",
+            "sourceColumn": "jobtitle",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "location",
+            "dataType": "string",
+            "sourceColumn": "location",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "location_city",
+            "dataType": "string",
+            "sourceColumn": "location_city",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "location_state",
+            "dataType": "string",
+            "sourceColumn": "location_state",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "age",
+            "dataType": "int64",
+            "sourceColumn": "age",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "age_group",
+            "dataType": "string",
+            "sourceColumn": "age_group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "status",
+            "dataType": "string",
+            "sourceColumn": "status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "is_valid",
+            "dataType": "int64",
+            "sourceColumn": "is_valid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "is_eligible",
+            "dataType": "int64",
+            "sourceColumn": "is_eligible",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "quality_issue",
+            "dataType": "string",
+            "sourceColumn": "quality_issue",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "hired_under_16",
+            "dataType": "int64",
+            "sourceColumn": "hired_under_16",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "as_of_date",
+            "dataType": "dateTime",
+            "sourceColumn": "as_of_date",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Employees",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"/employees.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    EmptyDates = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {\"birthdate\", \"hire_date\", \"termdate\", \"as_of_date\"}),",
+                "    Typed = Table.TransformColumnTypes(EmptyDates, {{\"emp_id\", type text}, {\"birthdate\", type date}, {\"hire_date\", type date}, {\"termdate\", type date}, {\"gender\", type text}, {\"race\", type text}, {\"department\", type text}, {\"jobtitle\", type text}, {\"location\", type text}, {\"location_city\", type text}, {\"location_state\", type text}, {\"age\", Int64.Type}, {\"age_group\", type text}, {\"status\", type text}, {\"is_valid\", Int64.Type}, {\"is_eligible\", Int64.Type}, {\"quality_issue\", type text}, {\"hired_under_16\", Int64.Type}, {\"as_of_date\", type date}}, \"en-US\"),",
+                "    Eligible = Table.SelectRows(Typed, each [is_eligible] = 1)",
+                "in",
+                "    Eligible"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Active Employees",
+            "expression": "CALCULATE(COUNTROWS(Employees), Employees[status] = \"Active\")",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Eligible Hires",
+            "expression": "COUNTROWS(Employees)",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Terminated Employees",
+            "expression": "CALCULATE(COUNTROWS(Employees), Employees[status] = \"Terminated\")",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Cumulative Exit Share",
+            "expression": "DIVIDE([Terminated Employees], [Eligible Hires])",
+            "formatString": "0.00%"
+          },
+          {
+            "name": "Average Completed Tenure",
+            "expression": "AVERAGEX(FILTER(Employees, Employees[status] = \"Terminated\"), DIVIDE(DATEDIFF(Employees[hire_date], Employees[termdate], DAY), 365.2425))",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Closing Headcount",
+            "expression": "VAR Y = SELECTEDVALUE('Year'[year]) VAR Cutoff = MIN(DATE(Y, 12, 31), MAXX(ALL(Employees), Employees[as_of_date])) RETURN IF(NOT ISBLANK(Y), CALCULATE(COUNTROWS(Employees), FILTER(Employees, Employees[hire_date] <= Cutoff && (ISBLANK(Employees[termdate]) || Employees[termdate] > Cutoff))))",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Annual Hires",
+            "expression": "VAR Y = SELECTEDVALUE('Year'[year]) RETURN COUNTROWS(FILTER(Employees, YEAR(Employees[hire_date]) = Y))",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Annual Exits",
+            "expression": "VAR Y = SELECTEDVALUE('Year'[year]) VAR Cutoff = MAXX(ALL(Employees), Employees[as_of_date]) RETURN COUNTROWS(FILTER(Employees, NOT ISBLANK(Employees[termdate]) && YEAR(Employees[termdate]) = Y && Employees[termdate] <= Cutoff))",
+            "formatString": "#,0"
+          }
+        ]
+      },
+      {
+        "name": "Year",
+        "columns": [
+          {
+            "name": "year",
+            "dataType": "int64",
+            "sourceColumn": "year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "opening_headcount",
+            "dataType": "int64",
+            "sourceColumn": "opening_headcount",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "hires",
+            "dataType": "int64",
+            "sourceColumn": "hires",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "terminations",
+            "dataType": "int64",
+            "sourceColumn": "terminations",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "net_change",
+            "dataType": "int64",
+            "sourceColumn": "net_change",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "closing_headcount",
+            "dataType": "int64",
+            "sourceColumn": "closing_headcount",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "annual_turnover_rate",
+            "dataType": "double",
+            "sourceColumn": "annual_turnover_rate",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Year",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"/annual_workforce.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    EmptyDates = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, {}),",
+                "    Typed = Table.TransformColumnTypes(EmptyDates, {{\"year\", Int64.Type}, {\"opening_headcount\", Int64.Type}, {\"hires\", Int64.Type}, {\"terminations\", Int64.Type}, {\"net_change\", Int64.Type}, {\"closing_headcount\", Int64.Type}, {\"annual_turnover_rate\", type number}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
